@@ -52,52 +52,11 @@ public class BeforeClassDemo {
 	public static String All_ReportName;
 	public static String Fail_ReportName;
 
-	/*
-	 * @BeforeClass
-	 * 
-	 * @Parameters({ "browser" }) public void DriverDeclering(@Optional("chrome")
-	 * String string) throws InterruptedException { if
-	 * (string.equalsIgnoreCase("chrome")) { ConfigFile configFile = new
-	 * ConfigFile(); contextJava.setConfigFile(configFile); WebDriver driver = new
-	 * ChromeDriver(); contextJava.setDriver(driver);
-	 * WebDriverManager.chromedriver().setup();
-	 * contextJava.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds
-	 * (10)); WebDriverWait wait = new WebDriverWait(driver,
-	 * Duration.ofSeconds(10)); contextJava.setWait(wait);
-	 * contextJava.getDriver().manage().window().maximize(); }
-	 * 
-	 * if (string.equalsIgnoreCase("edge")) { WebDriver driver = new EdgeDriver();
-	 * ConfigFile configFile = new ConfigFile();
-	 * contextJava.setConfigFile(configFile); contextJava.setDriver(driver);
-	 * WebDriverManager.edgedriver().setup();
-	 * contextJava.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds
-	 * (10)); WebDriverWait wait = new WebDriverWait(driver,
-	 * Duration.ofSeconds(10)); contextJava.setWait(wait);
-	 * contextJava.getDriver().manage().window().maximize(); }
-	 * 
-	 * if (string.equalsIgnoreCase("firefox")) { WebDriver driver = new
-	 * FirefoxDriver(); ConfigFile configFile = new ConfigFile();
-	 * contextJava.setConfigFile(configFile); contextJava.setDriver(driver);
-	 * WebDriverManager.firefoxdriver().setup();
-	 * contextJava.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds
-	 * (10)); WebDriverWait wait = new WebDriverWait(driver,
-	 * Duration.ofSeconds(10)); contextJava.setWait(wait);
-	 * contextJava.getDriver().manage().window().maximize(); }
-	 * 
-	 * 
-	 * 
-	 * }
-	 */
-
-	/*
-	 * @Aftertest public void Teardown() { contextJava.getDriver().quit(); ; }
-	 */
-
 	@BeforeSuite
-	@Parameters({"TesterName","URL"})
+	@Parameters({ "TesterName", "URL" })
 	public void initialseExtentReports(String Testername, String URL) {
 		String timestamp = new SimpleDateFormat("-yyyy-MM-dd-hh-mm-ss").format(new Date());
-		All_ReportName = "AllTestReport" + timestamp + ".html";
+		String All_ReportName = "AllTestReport" + timestamp + ".html";
 		ExtentSparkReporter Sparkreporter_All = new ExtentSparkReporter(
 				System.getProperty("user.dir") + "/Extend Reports/" + All_ReportName);
 		Sparkreporter_All.config().setReportName("All Test Report");
@@ -105,7 +64,7 @@ public class BeforeClassDemo {
 		Sparkreporter_All.config().setTheme(Theme.DARK);
 		Sparkreporter_All.config().setJs("document.getElementsByClassName('logo')[0].style.display='none';");
 
-		Fail_ReportName = "FailTestReport" + timestamp + ".html";
+		String Fail_ReportName = "FailTestReport" + timestamp + ".html";
 		ExtentSparkReporter SparkReporter_Failed = new ExtentSparkReporter(
 				System.getProperty("user.dir") + "/Extend Reports/" + Fail_ReportName);
 		SparkReporter_Failed.filter().statusFilter().as(new Status[] { Status.FAIL }).apply();
@@ -117,7 +76,7 @@ public class BeforeClassDemo {
 
 		extentReports = new ExtentReports();
 		extentReports.attachReporter(Sparkreporter_All, SparkReporter_Failed);
-		extentReports.setSystemInfo("Tester Name",Testername);
+		extentReports.setSystemInfo("Tester Name", Testername);
 		extentReports.setSystemInfo("Environment", "QA");
 		extentReports.setSystemInfo("Host", URL);
 		extentReports.setSystemInfo("OS", System.getProperty("os.name"));
@@ -161,7 +120,7 @@ public class BeforeClassDemo {
 			contextJava.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			contextJava.setWait(wait);
-			contextJava.getDriver().manage().window().maximize();
+			//contextJava.getDriver().manage().window().maximize();
 		}
 
 		Capabilities capabilities = ((RemoteWebDriver) contextJava.getDriver()).getCapabilities();
@@ -169,7 +128,7 @@ public class BeforeClassDemo {
 				+ capabilities.getBrowserVersion().substring(0, capabilities.getBrowserVersion().indexOf("."));
 		String author = context.getCurrentXmlTest().getParameter("author");
 
-		extentTest = extentReports.createTest(context.getName());
+		ExtentTest extentTest = extentReports.createTest(context.getName());
 		extentTest.assignAuthor(author);
 		extentTest.assignDevice(device);
 	}
@@ -187,8 +146,8 @@ public class BeforeClassDemo {
 					result.getTestContext().getName() + "_" + result.getMethod().getMethodName() + ".jpg");
 			extentTest.addScreenCaptureFromPath(screenshotPath);
 			extentTest.fail(MarkupHelper.createLabel(m.getName() + " is Failed", ExtentColor.RED));
-			extentTest.fail(result.getThrowable(), MediaEntityBuilder
-					.createScreenCaptureFromBase64String(Screencapture64()).build());
+			extentTest.fail(result.getThrowable(),
+					MediaEntityBuilder.createScreenCaptureFromBase64String(Screencapture64()).build());
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			extentTest.pass(MarkupHelper.createLabel(m.getName() + " is Passed", ExtentColor.GREEN));
 		} else if (result.getStatus() == ITestResult.SKIP) {

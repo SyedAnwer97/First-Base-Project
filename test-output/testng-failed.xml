@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="1" parallel="tests" name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
-  <parameter name="TesterName" value="Syed Anwer"/>
+  <parameter name="TesterName" value="Syed Anwer H"/>
   <parameter name="URL" value="https://www.alfadock-pack.com/"/>
   <listeners>
     <listener class-name="listeners.Transform"/>

@@ -10,8 +10,8 @@ import PageObjectModel.UserLoginPage;
 
 public class BaseClass2 extends BeforeClassDemo {
 
-	@Test(groups = {"Smoke","Sanity"})
-	public void openingBrowserFirefox() throws InterruptedException {
+	@Test(groups = { "Smoke", "Sanity" })
+	public synchronized void openingBrowserFirefox() throws InterruptedException {
 		contextJava.getDriver().get(contextJava.getConfigFile().webURL());
 		CustomerLoginPage customerLoginPage = new CustomerLoginPage(contextJava.getDriver());
 		Select select = new Select(customerLoginPage.日本語);
@@ -27,7 +27,7 @@ public class BaseClass2 extends BeforeClassDemo {
 		loginPage.Login.click();
 		Thread.sleep(3000);
 		assertEquals(false, true);
-		//Assert.assertEquals(contextJava.getDriver().getTitle(), "UserLogin123");
+		// Assert.assertEquals(contextJava.getDriver().getTitle(), "UserLogin123");
 	}
 
 }

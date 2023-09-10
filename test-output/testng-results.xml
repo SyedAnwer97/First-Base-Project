@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="3" ignored="3" total="9" passed="1" failed="1" skipped="1">
+<testng-results retried="1" ignored="1" total="5" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-10T16:35:48 IST" name="Suite1" finished-at="2023-09-10T16:36:52 IST" duration-ms="63385">
+  <suite started-at="2023-09-10T20:22:42 IST" name="Suite1" finished-at="2023-09-10T20:23:23 IST" duration-ms="40925">
     <groups>
       <group name="Sanity">
         <method signature="BaseClass2.openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass2@131ef10]" name="openingBrowserFirefox" class="TestCases.BaseClass2"/>
@@ -17,13 +17,13 @@
         <method signature="BaseClass3.openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass3@2df3b89c]" name="openingBrowserFirefox" class="TestCases.BaseClass3"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2023-09-10T16:35:48 IST" name="FirstTest" finished-at="2023-09-10T16:36:02 IST" duration-ms="13876">
+    <test started-at="2023-09-10T20:22:42 IST" name="FirstTest" finished-at="2023-09-10T20:22:56 IST" duration-ms="14224">
       <class name="TestCases.BaseClass">
-        <test-method is-config="true" signature="createTestInReport(org.testng.ITestContext,java.lang.String)[pri:0, instance:TestCases.BaseClass@185a6e9]" started-at="2023-09-10T16:35:48 IST" name="createTestInReport" finished-at="2023-09-10T16:35:52 IST" duration-ms="3252" status="PASS">
+        <test-method is-config="true" signature="createTestInReport(org.testng.ITestContext,java.lang.String)[pri:0, instance:TestCases.BaseClass@185a6e9]" started-at="2023-09-10T20:22:42 IST" name="createTestInReport" finished-at="2023-09-10T20:22:46 IST" duration-ms="3734" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@34645867]]>
+                <![CDATA[org.testng.TestRunner@3e2943ab]]>
               </value>
             </param>
             <param index="1">
@@ -35,11 +35,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestInReport -->
-        <test-method signature="openingBrowserChrome()[pri:0, instance:TestCases.BaseClass@185a6e9]" started-at="2023-09-10T16:35:52 IST" name="openingBrowserChrome" finished-at="2023-09-10T16:36:02 IST" duration-ms="10293" status="PASS">
+        <test-method signature="openingBrowserChrome()[pri:0, instance:TestCases.BaseClass@185a6e9]" started-at="2023-09-10T20:22:46 IST" name="openingBrowserChrome" finished-at="2023-09-10T20:22:56 IST" duration-ms="10159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openingBrowserChrome -->
-        <test-method is-config="true" signature="checkStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:TestCases.BaseClass@185a6e9]" started-at="2023-09-10T16:36:02 IST" name="checkStatus" finished-at="2023-09-10T16:36:02 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="checkStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:TestCases.BaseClass@185a6e9]" started-at="2023-09-10T20:22:56 IST" name="checkStatus" finished-at="2023-09-10T20:22:56 IST" duration-ms="7" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -52,22 +52,59 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.aventstack.extentreports.ExtentTest.pass(com.aventstack.extentreports.markuputils.Markup)" because "TestCases.BeforeClassDemo.extentTest" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.pass(com.aventstack.extentreports.markuputils.Markup)" because "TestCases.BeforeClassDemo.extentTest" is null
+at TestCases.BeforeClassDemo.checkStatus(BeforeClassDemo.java:152)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkStatus -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.BaseClass@185a6e9]" started-at="2023-09-10T16:36:02 IST" name="teardown" finished-at="2023-09-10T16:36:02 IST" duration-ms="259" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.BaseClass@185a6e9]" started-at="2023-09-10T20:22:56 IST" name="teardown" finished-at="2023-09-10T20:22:56 IST" duration-ms="262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- TestCases.BaseClass -->
     </test> <!-- FirstTest -->
-    <test started-at="2023-09-10T16:36:02 IST" name="SecondTest" finished-at="2023-09-10T16:36:46 IST" duration-ms="43767">
+    <test started-at="2023-09-10T20:22:56 IST" name="SecondTest" finished-at="2023-09-10T20:23:19 IST" duration-ms="22303">
       <class name="TestCases.BaseClass2">
-        <test-method is-config="true" signature="createTestInReport(org.testng.ITestContext,java.lang.String)[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T16:36:02 IST" name="createTestInReport" finished-at="2023-09-10T16:36:04 IST" duration-ms="1837" status="PASS">
+        <test-method is-config="true" signature="createTestInReport(org.testng.ITestContext,java.lang.String)[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T20:22:56 IST" name="createTestInReport" finished-at="2023-09-10T20:23:00 IST" duration-ms="3327" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2484f433]]>
+                <![CDATA[org.testng.TestRunner@70dd7e15]]>
               </value>
             </param>
             <param index="1">
@@ -79,7 +116,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestInReport -->
-        <test-method retried="true" signature="openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T16:36:04 IST" name="openingBrowserFirefox" finished-at="2023-09-10T16:36:12 IST" duration-ms="8066" status="SKIP">
+        <test-method retried="true" signature="openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T20:23:00 IST" name="openingBrowserFirefox" finished-at="2023-09-10T20:23:07 IST" duration-ms="7589" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -122,11 +159,11 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openingBrowserFirefox -->
-        <test-method is-config="true" signature="checkStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T16:36:12 IST" name="checkStatus" finished-at="2023-09-10T16:36:12 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="checkStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T20:23:07 IST" name="checkStatus" finished-at="2023-09-10T20:23:07 IST" duration-ms="0" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestCases.BaseClass2.openingBrowserFirefox() throws java.lang.InterruptedException]]>
+                <![CDATA[public synchronized void TestCases.BaseClass2.openingBrowserFirefox() throws java.lang.InterruptedException]]>
               </value>
             </param>
             <param index="1">
@@ -135,10 +172,47 @@ at java.base/java.lang.Thread.run(Thread.java:833)
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.aventstack.extentreports.ExtentTest.skip(com.aventstack.extentreports.markuputils.Markup)" because "TestCases.BeforeClassDemo.extentTest" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.skip(com.aventstack.extentreports.markuputils.Markup)" because "TestCases.BeforeClassDemo.extentTest" is null
+at TestCases.BeforeClassDemo.checkStatus(BeforeClassDemo.java:154)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkStatus -->
-        <test-method retried="true" signature="openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T16:36:12 IST" name="openingBrowserFirefox" finished-at="2023-09-10T16:36:25 IST" duration-ms="12290" status="SKIP">
+        <test-method signature="openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T20:23:07 IST" name="openingBrowserFirefox" finished-at="2023-09-10T20:23:19 IST" duration-ms="11097" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='mySelect']"}
@@ -147,9 +221,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.12.0', revision: '249f2a7d1b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [9384f0d9a0e3d602972963e0a5d79757, findElement {using=xpath, value=//select[@id='mySelect']}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58648}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58648/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9384f0d9a0e3d602972963e0a5d79757]]>
+Command: [3062d4c7b47cf0bce1456b6d2886c48b, findElement {using=xpath, value=//select[@id='mySelect']}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63421}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63421/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3062d4c7b47cf0bce1456b6d2886c48b]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='mySelect']"}
@@ -158,9 +232,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.12.0', revision: '249f2a7d1b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [9384f0d9a0e3d602972963e0a5d79757, findElement {using=xpath, value=//select[@id='mySelect']}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58648}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58648/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9384f0d9a0e3d602972963e0a5d79757
+Command: [3062d4c7b47cf0bce1456b6d2886c48b, findElement {using=xpath, value=//select[@id='mySelect']}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63421}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63421/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3062d4c7b47cf0bce1456b6d2886c48b
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -210,211 +284,23 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openingBrowserFirefox -->
-        <test-method is-config="true" signature="checkStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T16:36:25 IST" name="checkStatus" finished-at="2023-09-10T16:36:25 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void TestCases.BaseClass2.openingBrowserFirefox() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=openingBrowserFirefox status=SKIP method=BaseClass2.openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass2@131ef10] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="checkStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T20:23:19 IST" name="checkStatus" finished-at="2023-09-10T20:23:19 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkStatus -->
-        <test-method retried="true" signature="openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T16:36:25 IST" name="openingBrowserFirefox" finished-at="2023-09-10T16:36:35 IST" duration-ms="10359" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='mySelect']"}
-  (Session info: MicrosoftEdge=116.0.1938.76)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [9384f0d9a0e3d602972963e0a5d79757, findElement {using=xpath, value=//select[@id='mySelect']}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58648}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58648/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9384f0d9a0e3d602972963e0a5d79757]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='mySelect']"}
-  (Session info: MicrosoftEdge=116.0.1938.76)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [9384f0d9a0e3d602972963e0a5d79757, findElement {using=xpath, value=//select[@id='mySelect']}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58648}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58648/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9384f0d9a0e3d602972963e0a5d79757
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.getTagName(Unknown Source)
-at org.openqa.selenium.support.ui.Select.<init>(Select.java:43)
-at TestCases.BaseClass2.openingBrowserFirefox(BaseClass2.java:17)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openingBrowserFirefox -->
-        <test-method is-config="true" signature="checkStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T16:36:35 IST" name="checkStatus" finished-at="2023-09-10T16:36:35 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void TestCases.BaseClass2.openingBrowserFirefox() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=openingBrowserFirefox status=SKIP method=BaseClass2.openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass2@131ef10] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatus -->
-        <test-method signature="openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T16:36:35 IST" name="openingBrowserFirefox" finished-at="2023-09-10T16:36:45 IST" duration-ms="10393" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='mySelect']"}
-  (Session info: MicrosoftEdge=116.0.1938.76)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [9384f0d9a0e3d602972963e0a5d79757, findElement {using=xpath, value=//select[@id='mySelect']}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58648}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58648/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9384f0d9a0e3d602972963e0a5d79757]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='mySelect']"}
-  (Session info: MicrosoftEdge=116.0.1938.76)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.0', revision: '249f2a7d1b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [9384f0d9a0e3d602972963e0a5d79757, findElement {using=xpath, value=//select[@id='mySelect']}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58648}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58648/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9384f0d9a0e3d602972963e0a5d79757
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.getTagName(Unknown Source)
-at org.openqa.selenium.support.ui.Select.<init>(Select.java:43)
-at TestCases.BaseClass2.openingBrowserFirefox(BaseClass2.java:17)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openingBrowserFirefox -->
-        <test-method is-config="true" signature="checkStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T16:36:45 IST" name="checkStatus" finished-at="2023-09-10T16:36:46 IST" duration-ms="468" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void TestCases.BaseClass2.openingBrowserFirefox() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=openingBrowserFirefox status=FAILURE method=BaseClass2.openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass2@131ef10] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatus -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T16:36:46 IST" name="teardown" finished-at="2023-09-10T16:36:46 IST" duration-ms="319" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.BaseClass2@131ef10]" started-at="2023-09-10T20:23:19 IST" name="teardown" finished-at="2023-09-10T20:23:19 IST" duration-ms="269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- TestCases.BaseClass2 -->
     </test> <!-- SecondTest -->
-    <test started-at="2023-09-10T16:36:46 IST" name="ThirdTest" finished-at="2023-09-10T16:36:52 IST" duration-ms="5686">
+    <test started-at="2023-09-10T20:23:19 IST" name="ThirdTest" finished-at="2023-09-10T20:23:23 IST" duration-ms="4348">
       <class name="TestCases.BaseClass3">
-        <test-method is-config="true" signature="initialseExtentReports(java.lang.String,java.lang.String)[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T16:35:48 IST" name="initialseExtentReports" finished-at="2023-09-10T16:35:48 IST" duration-ms="351" status="PASS">
+        <test-method is-config="true" signature="initialseExtentReports(java.lang.String,java.lang.String)[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T20:22:42 IST" name="initialseExtentReports" finished-at="2023-09-10T20:22:42 IST" duration-ms="391" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Syed Anwer]]>
+                <![CDATA[Syed Anwer H]]>
               </value>
             </param>
             <param index="1">
@@ -426,11 +312,11 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialseExtentReports -->
-        <test-method is-config="true" signature="createTestInReport(org.testng.ITestContext,java.lang.String)[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T16:36:46 IST" name="createTestInReport" finished-at="2023-09-10T16:36:51 IST" duration-ms="4627" status="PASS">
+        <test-method is-config="true" signature="createTestInReport(org.testng.ITestContext,java.lang.String)[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T20:23:19 IST" name="createTestInReport" finished-at="2023-09-10T20:23:22 IST" duration-ms="3395" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@60b71e8f]]>
+                <![CDATA[org.testng.TestRunner@4a9f80d3]]>
               </value>
             </param>
             <param index="1">
@@ -442,14 +328,14 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestInReport -->
-        <test-method signature="openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T16:36:51 IST" name="openingBrowserFirefox" finished-at="2023-09-10T16:36:51 IST" duration-ms="1" status="SKIP">
+        <test-method signature="openingBrowserFirefox()[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T20:23:22 IST" name="openingBrowserFirefox" finished-at="2023-09-10T20:23:22 IST" duration-ms="1" status="SKIP">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping this exception]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: Skipping this exception
-at TestCases.BaseClass3.openingBrowserFirefox(BaseClass3.java:28)
+at TestCases.BaseClass3.openingBrowserFirefox(BaseClass3.java:13)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -478,11 +364,11 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openingBrowserFirefox -->
-        <test-method is-config="true" signature="checkStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T16:36:51 IST" name="checkStatus" finished-at="2023-09-10T16:36:51 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="checkStatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T20:23:22 IST" name="checkStatus" finished-at="2023-09-10T20:23:22 IST" duration-ms="0" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestCases.BaseClass3.openingBrowserFirefox() throws java.lang.InterruptedException]]>
+                <![CDATA[public synchronized void TestCases.BaseClass3.openingBrowserFirefox() throws java.lang.InterruptedException]]>
               </value>
             </param>
             <param index="1">
@@ -491,14 +377,85 @@ at java.base/java.lang.Thread.run(Thread.java:833)
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.aventstack.extentreports.ExtentTest.skip(com.aventstack.extentreports.markuputils.Markup)" because "TestCases.BeforeClassDemo.extentTest" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.skip(com.aventstack.extentreports.markuputils.Markup)" because "TestCases.BeforeClassDemo.extentTest" is null
+at TestCases.BeforeClassDemo.checkStatus(BeforeClassDemo.java:154)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkStatus -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T16:36:51 IST" name="teardown" finished-at="2023-09-10T16:36:52 IST" duration-ms="1054" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T20:23:22 IST" name="teardown" finished-at="2023-09-10T20:23:23 IST" duration-ms="943" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="generateExtentReports()[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T16:36:52 IST" name="generateExtentReports" finished-at="2023-09-10T16:36:53 IST" duration-ms="1397" status="PASS">
+        <test-method is-config="true" signature="generateExtentReports()[pri:0, instance:TestCases.BaseClass3@2df3b89c]" started-at="2023-09-10T20:23:23 IST" name="generateExtentReports" finished-at="2023-09-10T20:23:24 IST" duration-ms="557" status="FAIL">
+          <exception class="java.io.IOException">
+            <message>
+              <![CDATA[Failed to open file:/C:/Users/admin/Desktop/Codes/DemoCodes/Extend%20Reports/null. Error message: The system cannot find the file specified.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.IOException: Failed to open file:/C:/Users/admin/Desktop/Codes/DemoCodes/Extend%20Reports/null. Error message: The system cannot find the file specified.
+
+at java.desktop/sun.awt.windows.WDesktopPeer.ShellExecute(WDesktopPeer.java:115)
+at java.desktop/sun.awt.windows.WDesktopPeer.browse(WDesktopPeer.java:101)
+at java.desktop/java.awt.Desktop.browse(Desktop.java:533)
+at TestCases.BeforeClassDemo.generateExtentReports(BeforeClassDemo.java:165)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:410)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.IOException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateExtentReports -->
